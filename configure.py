@@ -476,7 +476,7 @@ if not try_compile(args.cxx, '#include <gnutls/gnutls.h>'):
     sys.exit(1)
 
 if not try_compile(args.cxx, '#include <gnutls/gnutls.h>\nint x = GNUTLS_NONBLOCK;'):
-    print('Seastar requires gnutls >= 2.8.  Install libgnutls28-dev or later.')
+    print('Seastar requires gnutls >= 3.0.  Install libgnutls28-dev or later.')
     sys.exit(1)
 
 if not try_compile(args.cxx, '#include <experimental/string_view>', ['-std=gnu++1y']):
